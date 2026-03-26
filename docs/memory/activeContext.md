@@ -22,11 +22,13 @@ _This file updates most frequently. Reflects state as of 2026-03-25._
 ## Unreleased Changes (in progress on master)
 
 ### Breaking API Changes
+
 - `excalidrawAPI` prop renamed to `onExcalidrawAPI`
   - Now called on mount (not constructor), and with `null` on unmount
 - Deprecated UMD bundle — **ESM only** going forward (since 0.18.0)
 
 ### Recently Added on `master` (Unreleased)
+
 - `ExcalidrawAPI.isDestroyed` flag — already in API; throws in dev / `console.error` in prod if called after unmount
 - `onMount`, `onInitialize`, `onUnmount` lifecycle props
 - `api.onEvent(name, callback)` — already in API; imperative event subscription

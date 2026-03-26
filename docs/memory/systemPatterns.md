@@ -37,7 +37,7 @@ The architecture enforces strict package boundaries: app-layer code can depend o
 
 ### Data Flow
 
-```
+```text
 User interaction
   → App.tsx event handler
   → AppState / Scene mutation
@@ -49,10 +49,9 @@ User interaction
 
 ## Element Immutability Pattern
 
-All `ExcalidrawElement` instances are **immutable** — never mutate directly:
-- Use `newElementWith(element, { ...changes })` to produce updated copies
+All `ExcalidrawElement` instances are treated as **immutable** — prefer immutable updates; controlled in-place mutation is available via `mutateElement` (`packages/element/src/mutateElement.ts`) for specific use-cases:
+- Prefer `newElementWith(element, { ...changes })` to produce updated copies (enables `===` change detection, collaboration versioning, undo/redo snapshots)
 - Deleted elements stay in scene with `isDeleted: true`; use `getNonDeletedElements()` for rendering
-- Immutability enables `===` change detection, collaboration versioning, and undo/redo snapshots
 
 ---
 

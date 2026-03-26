@@ -27,5 +27,12 @@ coverage/
 .idea/
 .DS_Store
 
+# Cache / temp / logs
+.cache/
+.turbo/
+tmp/
+*.log
+*.tmp
+
 # Misc generated outputs
 repomix-output.xml
