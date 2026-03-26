@@ -27,12 +27,12 @@ _This file updates most frequently. Reflects state as of 2026-03-25._
   - Now called on mount (not constructor), and with `null` on unmount
 - Deprecated UMD bundle — **ESM only** going forward (since 0.18.0)
 
-### Recently Added on `master` (Unreleased)
+### Available on `master` (Unreleased)
 
-- `ExcalidrawAPI.isDestroyed` flag — already in API; throws in dev / `console.error` in prod if called after unmount
+- `ExcalidrawAPI.isDestroyed` flag — throws in dev / `console.error` in prod if called after unmount
 - `onMount`, `onInitialize`, `onUnmount` lifecycle props
-- `api.onEvent(name, callback)` — already in API; imperative event subscription
-- `ExcalidrawAPIProvider` + `useExcalidrawAPI()` — already exported from package
+- `api.onEvent(name, callback)` — imperative event subscription
+- `ExcalidrawAPIProvider` + `useExcalidrawAPI()` — exported from package
 - `useAppStateValue(prop | props | selectorFn)` hook exported
 - `useOnExcalidrawStateChange(prop | props | selectorFn, callback)` hook exported
 - `onExport` prop — allows host apps to delay/intercept JSON export with async work and progress reporting
@@ -57,7 +57,7 @@ _This file updates most frequently. Reflects state as of 2026-03-25._
 
 ---
 
-## Coding Standards (from `.github/copilot-instructions.md`)
+## Coding Standards (from `.github/copilot-instructions.md` on GitHub)
 
 - TypeScript for all new code; prefer zero-allocation implementations
 - Performance over memory: trade RAM for fewer CPU cycles
